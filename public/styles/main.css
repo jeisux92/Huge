@@ -1,0 +1,80 @@
+@import "fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  font: 18px Hugie;
+}
+
+body {
+  width: 100vw;
+  color: #fff;
+}
+
+h2 {
+  float: left;
+  padding: 24px;
+  font-size: 1.5em;
+}
+
+nav {
+  background: #ec008c;
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li {
+  height: 72px;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: #ffffff;
+}
+
+nav > ul > li:hover {
+  background: #ffffff;
+  color: #ec008c;
+}
+
+nav > ul > li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav > ul > li a:hover {
+  text-decoration: none;
+  color: #ec008c;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 84%;
+  font-size: 6em;
+  text-align: center;
+}
+
+img {
+  height: 90vh;
+  width: 100vw;
+}
+
+p {
+  padding-top: 15px;
+  color: #000000;
+  text-align: center;
+  font-weight: normal;
+}
+
+ul.sub-menu {
+  background-color: #ffffff;
+}
+
+ul.sub-menu li {
+}
