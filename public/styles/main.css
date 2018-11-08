@@ -1,22 +1,23 @@
 @import "fonts.css";
-
 * {
   margin: 0;
   padding: 0;
   border: 0;
   display: block;
-  font: 18px Hugie;
 }
 
 body {
-  width: 100vw;
   color: #fff;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  ;
 }
 
-h2 {
+h3 {
   float: left;
   padding: 24px;
-  font-size: 1.5em;
+  font: 21px/24px Huge;
 }
 
 nav {
@@ -25,28 +26,31 @@ nav {
   align-items: center;
 }
 
-nav > ul > li {
+nav>ul>li {
   height: 72px;
   list-style: none;
   display: inline-flex;
   align-items: center;
-  padding: 0 24px;
   color: #ffffff;
 }
 
-nav > ul > li:hover {
+nav>ul>li:hover {
   background: #ffffff;
   color: #ec008c;
 }
 
-nav > ul > li a {
-  text-decoration: none;
-  color: inherit;
+nav>ul>li.active {
+  background: #ffffff;
+  color: #ec008c;
 }
 
-nav > ul > li a:hover {
+nav>ul>li a {
+  color: inherit;
   text-decoration: none;
-  color: #ec008c;
+  font: 21px/48px Huge;
+  font-weight: bold;
+  padding: 0 24px;
+  cursor: pointer;
 }
 
 h1 {
@@ -55,14 +59,20 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
-  width: 84%;
+  width: 50%;
+  font: 120px/132px Huge;
   font-size: 6em;
   text-align: center;
 }
 
-img {
-  height: 90vh;
-  width: 100vw;
+div.image {
+  background-image: url(../images/background-image.jpg);
+  display: block;
+  clear: both;
+  position: static;
+  height: 76vh;
+  background-repeat: round;
+  background-size: contain;
 }
 
 p {
@@ -73,8 +83,25 @@ p {
 }
 
 ul.sub-menu {
-  background-color: #ffffff;
+  display: none;
+  position: absolute;
+  top: 72px;
+  background-color: #fff;
+  z-index: 2;
 }
 
-ul.sub-menu li {
+ul.sub-menu a {
+  font: 16px/48px Huge;
+}
+
+li.active ul.sub-menu {
+  display: block;
+}
+
+ul.sub-menu li a:hover {
+  color: #ec008c;
+}
+
+ul.sub-menu li a {
+  color: #000000;
 }
