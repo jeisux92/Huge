@@ -3,78 +3,56 @@
 
 <head>
   <link rel="stylesheet" href="styles/main.css">
+  <script src="js/app.js" type="text/javascript"></script>
 </head>
 
 <body>
   <!-- Menu -->
   <nav>
-    <h3>HUGE</h3>
-    <ul>
-      <li><a href="">Work</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="">Careers</a>
-        <ul class="sub-menu">
-          <li><a href="">Client Services</a></li>
-          <li><a href="">Creative</a></li>
-          <li><a href="">Motion & Media</a></li>
-          <li><a href="">Operations</a></li>
-          <li><a href="">People</a></li>
-          <li><a href="">Strategy</a></li>
-          <li><a href="">Technology</a></li>
-          <li><a href="">UX & Product Design</a></li>
-        </ul>
-      </li>
-      <li><a href="">Ideas</a>
-        <ul class="sub-menu">
-          <li><a href="">Client Services</a></li>
-          <li><a href="">Creative</a></li>
-          <li><a href="">Motion & Media</a></li>
-          <li><a href="">Operations</a></li>
-          <li><a href="">People</a></li>
-          <li><a href="">Strategy</a></li>
-          <li><a href="">Technology</a></li>
-          <li><a href="">UX & Product Design</a></li>
-        </ul>
-      </li>
-      <li><a href="">News</a></li>
-      <li><a href="">Events</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
+    <div class="toggle">
+      <img src="images/toggle-open.svg" alt="">
+      <img src="images/toggle-close.svg" alt="">
+    </div>
+    <div class="menu">
+      <h3>HUGE</h3>
+      <ul>
+        <li><a href="">Work</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Careers</a>
+          <ul class="sub-menu">
+            <li><a href="">Client Services</a></li>
+            <li><a href="">Creative</a></li>
+            <li><a href="">Motion & Media</a></li>
+            <li><a href="">Operations</a></li>
+            <li><a href="">People</a></li>
+            <li><a href="">Strategy</a></li>
+            <li><a href="">Technology</a></li>
+            <li><a href="">UX & Product Design</a></li>
+          </ul>
+        </li>
+        <li><a href="">Ideas</a>
+          <ul class="sub-menu">
+            <li><a href="">Client Services</a></li>
+            <li><a href="">Creative</a></li>
+            <li><a href="">Motion & Media</a></li>
+            <li><a href="">Operations</a></li>
+            <li><a href="">People</a></li>
+            <li><a href="">Strategy</a></li>
+            <li><a href="">Technology</a></li>
+            <li><a href="">UX & Product Design</a></li>
+          </ul>
+        </li>
+        <li><a href="">News</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
   </nav>
   <div class="image">
     <h1>Get paid for giving a shit.</h1>
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-  <script>
-    window.onload = function () {
-      var topMenu = document.querySelectorAll("nav > ul > li");
-      if (topMenu) {
-        [...topMenu].forEach(element => {
-          element.addEventListener("click", mapEventsMenus);
-        });
-      }
-    }
-
-    mapEventsMenus = function (e) {
-      e.preventDefault();
-      var li = e.target.closest("li");
-      clearMenu();
-      li.classList.add("active")
-    }
-
-    document.addEventListener("mouseup", function (e) {
-      clearMenu();
-    });
-
-    clearMenu = function () {
-      var topMenu = document.querySelectorAll("nav > ul > li");
-
-      [...topMenu].forEach(element => {
-        element.classList.remove("active")
-      });
-    }
-
-  </script>
+  
 </body>
 
 </html>
