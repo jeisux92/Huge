@@ -11,6 +11,7 @@ body {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 h3 {
@@ -23,6 +24,7 @@ nav {
   background: #ec008c;
   height: 72px;
 }
+
 .menu {
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-.menu > ul > li {
+.menu>ul>li {
   height: 72px;
   list-style: none;
   display: inline-flex;
@@ -41,22 +43,21 @@ a {
   background: #ec008c;
 }
 
-.menu > ul > li:hover {
+.menu>ul>li:hover {
   background: #ffffff;
   color: #ec008c;
 }
 
-.menu > ul > li.active {
+.menu>ul>li.active {
   background: #ffffff;
   color: #ec008c;
 }
 
-.menu > ul > li > a {
+.menu>ul>li>a {
   color: inherit;
   font: 21px/48px Huge;
   font-weight: bold;
   padding: 0 24px;
-
   cursor: pointer;
 }
 
@@ -79,14 +80,16 @@ div.image {
   position: static;
   height: 76vh;
   background-repeat: round;
-  background-size: contain;
 }
 
 p {
-  padding-top: 15px;
+  padding-top: 60px;
   color: #000000;
   text-align: center;
   font-weight: normal;
+  width: 968px;
+  font: 23px/36px Galaxie;
+  margin: 0 auto;
 }
 
 ul.sub-menu {
@@ -106,10 +109,6 @@ li.active ul.sub-menu {
   padding: 0 24px;
 }
 
-.has-menu::after {
-  content: "U+25B2";
-}
-
 ul.sub-menu li a:hover {
   color: #ec008c;
 }
@@ -117,7 +116,8 @@ ul.sub-menu li a:hover {
 ul.sub-menu li a {
   color: #000000;
 }
-nav > div img {
+
+nav>div img {
   display: none;
   cursor: pointer;
 }
@@ -125,23 +125,35 @@ nav > div img {
 .toggle {
   float: left;
 }
-@media (max-width: 768px) {
-  nav > div img {
+
+@media (max-width: 968px) {
+  p {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 945px) {
+  div.image {
+    height: 240px;
+  }
+  nav>div img {
     display: block;
   }
   .menu {
     display: none;
   }
-
   h1 {
     font: 44px/48px Huge;
-    width: 52%;
+    width: 64%;
+    position: static;
+    transform: none;
+    color: #000000;
+    padding: 50px 0;
   }
-
   .toggle {
     float: none;
   }
-
   .smartphone .menu {
     display: flex;
     flex-direction: column;
@@ -149,14 +161,12 @@ nav > div img {
     width: fit-content;
     position: relative;
   }
-
-  .smartphone .menu > ul > li {
+  .smartphone .menu>ul>li {
     display: block;
     background-color: #ffffff;
     color: #000000;
     height: inherit;
   }
-
   ul.sub-menu {
     transform: none;
     position: static;
