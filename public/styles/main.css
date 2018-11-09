@@ -33,8 +33,10 @@ nav {
 a {
   text-decoration: none;
 }
-
-.menu>ul>li {
+.toggle img:last-child {
+  display: none;
+}
+.menu > ul > li {
   height: 72px;
   list-style: none;
   display: inline-flex;
@@ -43,17 +45,17 @@ a {
   background: #ec008c;
 }
 
-.menu>ul>li:hover {
+.menu > ul > li:hover {
   background: #ffffff;
   color: #ec008c;
 }
 
-.menu>ul>li.active {
+.menu > ul > li.active {
   background: #ffffff;
   color: #ec008c;
 }
 
-.menu>ul>li>a {
+.menu > ul > li > a {
   color: inherit;
   font: 21px/48px Huge;
   font-weight: bold;
@@ -117,7 +119,7 @@ ul.sub-menu li a {
   color: #000000;
 }
 
-nav>div img {
+nav > div img {
   display: none;
   cursor: pointer;
 }
@@ -134,12 +136,36 @@ nav>div img {
 }
 
 @media (max-width: 945px) {
+  .smartphone-active-menu .toggle img:first-child {
+    display: none;
+  }
+  .smartphone-active-menu .toggle img:last-child {
+    display: block;
+    float: right;
+  }
+  li.has-menu > a::after {
+    content: "\2303";
+    transform: rotatex(180deg);
+    color: #ec008c;
+    float: right;
+    font-size: 2em;
+    position: relative;
+    bottom: 12px;
+    padding-left: 10px;
+  }
+  li.has-menu.active > a::after {
+    transform: none;
+    bottom: -12px;
+    content: "\2303";
+  }
+
   div.image {
     height: 240px;
   }
-  nav>div img {
+  nav > div img {
     display: block;
   }
+
   .menu {
     display: none;
   }
@@ -154,14 +180,18 @@ nav>div img {
   .toggle {
     float: none;
   }
-  .smartphone .menu {
+  .smartphone-active-menu .menu {
+    width: 220px;
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: fit-content;
     position: relative;
   }
-  .smartphone .menu>ul>li {
+  .smartphone-active-menu .menu > ul {
+    width: 100%;  
+  }
+
+  .smartphone-active-menu .menu > ul > li {
     display: block;
     background-color: #ffffff;
     color: #000000;
