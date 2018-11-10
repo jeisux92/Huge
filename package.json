@@ -17,10 +17,11 @@
     "start": "gulp"
   },
   "dependencies": {
-    "express": "~4.2.0",
-    "morgan": "~1.0.0"
+    "gulp": "^3.9.1",
+    "gulp-connect": "latest"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-connect": "latest"
   }
 }

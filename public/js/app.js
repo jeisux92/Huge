@@ -10,6 +10,10 @@ window.onload = function() {
       element.addEventListener("click", mapEventsMenus);
     });
   }
+  var container = document.querySelector(".container");
+  container.addEventListener("click", function(e) {
+    clearMenu(e.target);
+  });
 };
 
 toogleMenu = function(state) {
@@ -29,16 +33,20 @@ mapEventsMenus = function(e) {
   } else {
     li.classList.add("active");
   }
+  clearMenu(li,e);
 };
 
-document.addEventListener("mouseup", function(e) {
-  //clearMenu();
-});
-
-clearMenu = function() {
+clearMenu = function(elementTarget,e) {
   var topMenu = document.querySelectorAll(".menu > ul > li");
-
   [...topMenu].forEach(element => {
-    element.classList.remove("active");
+    if (elementTarget != element) {
+      element.classList.remove("active");
+    }
   });
+  if ((elementTarget.closest(".container") && elementTarget.closest(".container").classList.contains("container")) || (e && e.target.classList.contains("item"))) {
+    var nav = document.querySelector("nav");
+    if (nav.classList.contains("smartphone-active-menu")) {
+      nav.classList.remove("smartphone-active-menu");
+    }
+  }
 };

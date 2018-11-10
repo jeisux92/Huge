@@ -108,7 +108,11 @@ ul.sub-menu a {
 
 li.active ul.sub-menu {
   display: block;
+}
+
+li.active ul.sub-menu li{
   padding: 0 24px;
+
 }
 
 ul.sub-menu li a:hover {
@@ -188,7 +192,7 @@ nav > div img {
     position: relative;
   }
   .smartphone-active-menu .menu > ul {
-    width: 100%;  
+    width: 100%;
   }
 
   .smartphone-active-menu .menu > ul > li {
@@ -196,6 +200,9 @@ nav > div img {
     background-color: #ffffff;
     color: #000000;
     height: inherit;
+  }
+  .smartphone-active-menu .menu > ul > li:hover, .smartphone-active-menu .menu > ul > li .sub-menu li:hover {
+    background: #eee;
   }
   ul.sub-menu {
     transform: none;
